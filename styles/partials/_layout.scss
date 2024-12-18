@@ -341,28 +341,28 @@ section.hero {
     }
   }
 
-  .diets {
-    .list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1.6rem;
+  // .diets {
+  //   .list {
+  //     list-style: none;
+  //     display: flex;
+  //     flex-direction: column;
+  //     gap: 1.6rem;
 
-      .list-item {
-        font-size: 1.8rem;
-        display: flex;
-        align-items: center;
-        gap: 1.6rem;
-        line-height: 1.2;
+  //     .list-item {
+  //       font-size: 1.8rem;
+  //       display: flex;
+  //       align-items: center;
+  //       gap: 1.6rem;
+  //       line-height: 1.2;
 
-        .list-icon {
-          width: 3rem;
-          height: 3rem;
-          color: $primary-color;
-        }
-      }
-    }
-  }
+  //       .list-icon {
+  //         width: 3rem;
+  //         height: 3rem;
+  //         color: $primary-color;
+  //       }
+  //     }
+  //   }
+  // }
 
   .all-recipes {
     text-align: center;
@@ -434,6 +434,205 @@ section.hero {
           transform: scale(1.1);
         }
       }
+    }
+  }
+}
+
+// Pricing
+.section-pricing {
+  padding: 9.6rem 0;
+
+  .pricing-plan--starter {
+    justify-self: end;
+    border: 2px solid $primary-tint;
+    padding: 4.6rem;
+  }
+
+  .pricing-plan {
+    border-radius: 11px;
+    width: 75%;
+
+    .plan-header {
+      text-align: center;
+      margin-bottom: 4.8rem;
+
+      .plan-name {
+        color: $secondary;
+        font-weight: 600;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.75;
+        margin-bottom: 3.2rem;
+      }
+
+      .plan-price {
+        font-size: 6.2rem;
+        font-weight: 600;
+        color: $heading-text;
+        margin-bottom: 1.6rem;
+      }
+
+      .plan-text {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        color: $text-color;
+      }
+    }
+  }
+
+  .pricing-plan--complete {
+    background-color: $primary-tint;
+    padding: 4.8rem;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "Best value";
+      position: absolute;
+      top: 6%;
+      right: -18%;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #333;
+      background-color: #ffd43b;
+      padding: 0.8rem 8rem;
+      transform: rotate(45deg);
+    }
+  }
+
+  .plan-sing-up {
+    text-align: center;
+    margin-top: 4.8rem;
+  }
+}
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+// CTA Action
+
+.section-cta {
+  padding: 4.8rem 0 12.8rem;
+
+  .cta {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* background-color: #e67e22; */
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+    border-radius: 11px;
+    background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+    overflow: hidden;
+
+    .cta-text-box {
+      padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+      color: #45260a;
+
+      .cta-text {
+        font-size: 1.8rem;
+        line-height: 1.8;
+        margin-bottom: 4.8rem;
+      }
+
+      .cta-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3.2rem;
+        row-gap: 2.4rem;
+
+        & label {
+          display: block;
+          font-size: 1.6rem;
+          font-weight: 500;
+          margin-bottom: 1.2rem;
+        }
+
+        & input,
+        & select {
+          width: 100%;
+          padding: 1.2rem;
+          font-size: 1.8rem;
+          font-family: inherit;
+          color: inherit;
+          border: none;
+          background-color: #fdf2e9;
+          border-radius: 9px;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn--form {
+          background-color: #45260a;
+          color: #fdf2e9;
+          align-self: end;
+          padding: 1.2rem;
+        }
+      }
+    }
+
+    .cta-img-box {
+      background-image: linear-gradient(to right bottom, rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35)), url("../../asset/eating.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+
+  .logo-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts {
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+
+  .footer-link:link,
+  .footer-link:visited {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #767676;
+    transition: all 0.3s;
+  }
+
+  .copyright {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #767676;
+    margin-top: auto;
+  }
+
+  .social-links {
+    list-style: none;
+    display: flex;
+    gap: 2.4rem;
+
+    .footer-link:link,
+    .footer-link:visited {
+      text-decoration: none;
+      font-size: 1.6rem;
+      color: #767676;
+      transition: all 0.3s;
     }
   }
 }

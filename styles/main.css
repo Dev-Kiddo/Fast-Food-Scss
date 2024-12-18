@@ -32,6 +32,10 @@ img {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .grid {
   display: grid;
   -moz-column-gap: 6.4rem;
@@ -42,6 +46,10 @@ img {
 
 .grid--center-v {
   align-items: center;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 
 .container {
@@ -73,6 +81,58 @@ img {
 
 .margin-bottom-md {
   margin-bottom: 4.8rem !important;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.list .list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  line-height: 1.2;
+}
+.list .list-item .list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
 }
 
 h1 {
@@ -359,24 +419,6 @@ section.hero .hero-wrapper .hero-img-box .hero-img {
 .section-meals .meal .meal-content .meal-tags .tag--paleo {
   background-color: #ffd43b;
 }
-.section-meals .diets .list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-}
-.section-meals .diets .list .list-item {
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-  line-height: 1.2;
-}
-.section-meals .diets .list .list-item .list-icon {
-  width: 3rem;
-  height: 3rem;
-  color: #e67e22;
-}
 .section-meals .all-recipes {
   text-align: center;
   font-size: 1.8rem;
@@ -439,6 +481,179 @@ section.hero .hero-wrapper .hero-img-box .hero-img {
 }
 .section-testimonials .gallery .gallery-item img:hover {
   transform: scale(1.1);
+}
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+.section-pricing .pricing-plan--starter {
+  justify-self: end;
+  border: 2px solid #fdf2e9;
+  padding: 4.6rem;
+}
+.section-pricing .pricing-plan {
+  border-radius: 11px;
+  width: 75%;
+}
+.section-pricing .pricing-plan .plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+.section-pricing .pricing-plan .plan-header .plan-name {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+.section-pricing .pricing-plan .plan-header .plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+.section-pricing .pricing-plan .plan-header .plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #555;
+}
+.section-pricing .pricing-plan--complete {
+  background-color: #fdf2e9;
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+.section-pricing .pricing-plan--complete::after {
+  content: "Best value";
+  position: absolute;
+  top: 6%;
+  right: -18%;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  background-color: #ffd43b;
+  padding: 0.8rem 8rem;
+  transform: rotate(45deg);
+}
+.section-pricing .plan-sing-up {
+  text-align: center;
+  margin-top: 4.8rem;
+}
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.section-cta {
+  padding: 4.8rem 0 12.8rem;
+}
+.section-cta .cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* background-color: #e67e22; */
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  overflow: hidden;
+}
+.section-cta .cta .cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #45260a;
+}
+.section-cta .cta .cta-text-box .cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+.section-cta .cta .cta-text-box .cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 3.2rem;
+       column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+.section-cta .cta .cta-text-box .cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.section-cta .cta .cta-text-box .cta-form input, .section-cta .cta .cta-text-box .cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.section-cta .cta .cta-text-box .cta-form .btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+.section-cta .cta .cta-img-box {
+  background-image: linear-gradient(to right bottom, rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35)), url("../../asset/eating.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+.footer .logo-col {
+  display: flex;
+  flex-direction: column;
+}
+.footer .contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.footer .footer-link:link,
+.footer .footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+.footer .copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+.footer .social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+.footer .social-links .footer-link:link,
+.footer .social-links .footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
 }
 
 .btn:link, .btn:visited {
