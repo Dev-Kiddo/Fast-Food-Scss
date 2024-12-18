@@ -31,6 +31,10 @@ img {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .grid {
   display: grid;
   column-gap: 6.4rem;
@@ -40,6 +44,10 @@ img {
 
 .grid--center-v {
   align-items: center;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 
 .container {
@@ -71,4 +79,58 @@ img {
 
 .margin-bottom-md {
   margin-bottom: 4.8rem !important;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  .list-item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    line-height: 1.2;
+
+    .list-icon {
+      width: 3rem;
+      height: 3rem;
+      color: $primary-color;
+    }
+  }
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
 }
